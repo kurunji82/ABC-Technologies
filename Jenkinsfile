@@ -1,4 +1,4 @@
-@Library('ABC-Technologies@main') _
+
 pipeline {
 
   agent any
