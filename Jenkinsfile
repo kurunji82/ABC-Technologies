@@ -20,6 +20,13 @@ pipeline {
                 expression { params.action == 'create' }
             }
             steps {
+                script {
+                    // Your build steps here
+                    sh '''
+                        echo "Environment variable: $INCLUDE_SRC_TEST_IN_LIBRARIES"
+                        # Other build commands
+                    '''
+                }
                 gitCheckout(
                     branch: "main",
                     url: "https://github.com/kurunji82/ABC-Technologies.git"
