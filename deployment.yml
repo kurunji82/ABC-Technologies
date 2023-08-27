@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ABC-Tech-web-app-deployment
+  labels:
+    app: abc-tech-web-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: abc-tech-web-app
+  template:
+    metadata:
+      labels:
+        app: abc-tech-web-app
+    spec:
+      containers:
+      - name: abc-tech-web-app-container
+        image: 001217974241.dkr.ecr.us-east-1.amazonaws.com/edureka-devops-proj-kurunji:latest
+        ports:
+        - containerPort: 8080
