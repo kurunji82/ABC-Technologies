@@ -25,6 +25,7 @@ pipeline {
                     sh '''
                         echo "Environment variable: $INCLUDE_SRC_TEST_IN_LIBRARIES"
                         # Other build commands
+                        export INCLUDE_SRC_TEST_IN_LIBRARIES=true
                     '''
                 }
                 gitCheckout(
